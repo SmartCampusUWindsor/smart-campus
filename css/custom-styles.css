@@ -1,0 +1,24 @@
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Questrial', sans-serif;
+}
+p, div {
+    font-family: 'Questrial', sans-serif;
+}
+
+.qFont {
+	font-family: 'Questrial', sans-serif;
+}
+
+.section-padding {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.section-margin {
+		margin: 20px;
+}
+
+@-moz-document url-prefix() {
+  fieldset { display: table-cell; }
+}

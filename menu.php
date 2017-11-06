@@ -51,7 +51,7 @@
 		function showIn(){
 			document.getElementById("in").style.display='block';
 			document.getElementById("out").style.display='none';
-			document.getElementById("Welcome").style.display='none';
+			document.getElementById("Welcome").style.display='none'; 
 		}
 	</script>
 
@@ -81,7 +81,7 @@
 					<li <?php if ($currentPage === "map"){ echo "class=\"active\"";} ?> ><a href="/campusmap.php">Campus Map</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li id="in" style="display: block;" onClick="showOut();"><div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark" data-width="300" data-height="49" data-longtitle="true"></div></li>
+					<li id="in" style="display: block;"><div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark" data-width="300" data-height="49" data-longtitle="true"></div></li>
 					<li id="out" style="display: none;" onClick="showIn();"><a href="#" onClick="signOut();"><span class="glyphicon glyphicon-log-out"></span> Sign Out</a></li>
 				</ul>
 			</div>

@@ -1,0 +1,128 @@
+
+body {
+ 
+  font-size: 11pt;
+  background: #fcf8e3;
+  
+}
+
+#scroll {
+	overflow: auto;
+	
+}
+
+
+#msgBoard{
+	margin-top: 25px;
+	border: 2px solid black;
+    background: #fcf8e3;
+	margin-left:25%;
+	height: 80vh;
+    width: 50%;
+	position:absolute;
+
+	
+}
+.errors {
+    font-weight: bold; 
+    font-style: italic; 
+    font-size: 90%; 
+    color: red;
+    margin-top: 0;
+	text-align: center;
+}
+
+#submitmsg{
+
+	width: 25%;
+	font-size: 25px;
+	height: 5.6vh;
+	position: absolute;
+    bottom: 0;
+    right: 0;
+	-webkit-appearance: none;
+}
+
+#msgtext{
+	height: 5vh;
+	font-size: 25px;
+	width: 74.6%;
+	position: absolute;
+    bottom: 0;
+    left: 0;
+	text-align: center;
+	border: 2px solid black;
+	
+}
+#msgsign{
+	height: 5vh;
+	font-size: 25px;
+	width: 100%;
+	position: absolute;
+    bottom: 0;
+    left: 0;
+	text-align: center;
+	
+	
+}
+#submitEntry{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	margin-top: 20px;
+	font-size: 23px;
+	width: 30%;
+}
+
+.leftmsg{
+	font-size: 30px;
+	background: #bfefd4;
+	display:inline;
+	float: left;
+	margin-top: 10px;
+	width: 18em;
+	overflow-wrap: break-word;
+	text-align: left;
+}
+.rightmsg{
+	font-size: 30px;
+	background: #e3ebf7;
+	display:inline;
+	float: right;
+	margin-top: 10px;
+	width: 18em;
+	overflow-wrap: break-word;
+	text-align: left;
+}
+
+
+td, th {
+    border: 1px solid black;
+	padding:10px;
+	 word-wrap:break-word;
+	
+}
+
+th {
+	text-align: center;
+}
+#del{
+	float: right;
+	background-color: #F44336;
+	color: #000;
+	cursor: pointer;
+	backface-visibility: hidden;
+	text-align: center;
+}
+
+.midText {
+	display: inline-block;
+	font-size: 30px;
+}
+.cText {
+	display: inline-block;
+	font-size: 12px;
+}
+.leftText{
+	text-align: justify;
+}

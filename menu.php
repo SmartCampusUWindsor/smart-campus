@@ -30,9 +30,12 @@
 			var profile = googleUser.getBasicProfile();
 			console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
 			console.log('Name: ' + profile.getName());
-			console.log('Image URL: ' + profile.getImageUrl());
+			console.log('Image URL~: ' + profile.getImageUrl());
 			console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+			createCookie("name", profile.getName(), 14);
+			createCookie("email", profile.getEmail(), 14);
 			showOut();
+			//location.reload();
 		}
 			
 		function signOut() {
@@ -40,19 +43,42 @@
 			auth2.signOut().then(function () {
 				console.log('User signed out.');
 			});
+			eraseCookie("name");
+			eraseCookie("email");
+			//location.reload();
 		}
 
 		function showOut(){
 			document.getElementById("out").style.display='block';
 			document.getElementById("Welcome").style.display='block';
 			document.getElementById("in").style.display='none';
+			$('#entryArea').load(document.URL +  ' #entryArea');
+			
 		}
 			
 		function showIn(){
 			document.getElementById("in").style.display='block';
 			document.getElementById("out").style.display='none';
-			document.getElementById("Welcome").style.display='none';
+			document.getElementById("Welcome").style.display='none'; 
+			$('#entryArea').load(document.URL +  ' #entryArea');
 		}
+		function createCookie(name, value, days) {
+			var expires;
+			if (days) {
+				var date = new Date();
+				date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+				expires = "; expires=" + date.toGMTString();
+			} 
+			else {
+			  expires = "";
+			}
+			document.cookie = escape(name) + "=" + escape(value) + expires + "; path=/";
+		}
+		
+		function eraseCookie(name) {
+			createCookie(name,"",-1);
+		}
+		
 	</script>
 
 </head>
@@ -79,9 +105,12 @@
 						</ul>
 					</li>
 					<li <?php if ($currentPage === "map"){ echo "class=\"active\"";} ?> ><a href="/campusmap.php">Campus Map</a></li>
+					<li <?php if ($currentPage === "messages"){ echo "class=\"active\"";} ?> ><a href="/messageboard.php">Message Board</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li id="in" style="display: block;" onClick="showOut();"><div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark" data-width="300" data-height="49" data-longtitle="true"></div></li>
+					<li id="Welcome" style="display: none"></li>
+					<!-- Removed the showOut call when the sign in button is clicked. -->
+					<li id="in" style="display: block;"><div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark" data-width="300" data-height="49" data-longtitle="true"></div></li>
 					<li id="out" style="display: none;" onClick="showIn();"><a href="#" onClick="signOut();"><span class="glyphicon glyphicon-log-out"></span> Sign Out</a></li>
 				</ul>
 			</div>

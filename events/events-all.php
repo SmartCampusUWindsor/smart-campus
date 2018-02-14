@@ -33,7 +33,7 @@
 								echo "<tbody>";
 								foreach ($jsonArray as $jObj){
 										echo "<tr>";
-										echo "<td>".$jObj->stitle."</td>";
+										echo "<td>".stripslashes($jObj->stitle)."</td>";
 										echo "<td>".$jObj->date_start."</td>";
 										echo "</tr>";
 								}

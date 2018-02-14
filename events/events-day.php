@@ -40,7 +40,7 @@
 									if (strpos($jObj->date_start, $date) !== false)
 									{
 										echo "<tr>";
-										echo "<td>".$jObj->stitle."</td>";
+										echo "<td>".stripslashes($jObj->stitle)."</td>";
 										echo "<td>".$jObj->date_start."</td>";
 										echo "</tr>";
 									}

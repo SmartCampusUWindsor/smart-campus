@@ -1,5 +1,5 @@
 <?php
-/*  Note - Use a "/" to begin the reference to each link. 
+/*  Note - Use a "/" to begin the reference to each link.
  *  This allows the file to be pulled relative to the web server's root directory
  *  This is useful for calling the menu even with php files in subfolders
  */
@@ -13,17 +13,17 @@
 	<!--Bootstrap CSS and JavaScript-->
 	<link rel="stylesheet" href="/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
-	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 	<!--Google Log In API script-->
 	<script src="https://apis.google.com/js/platform.js" async defer></script>
-	
+
 	<!--Questrial google font link-->
 	<link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
-	
+
 	<!--Extra CSS added by students in CS on top of Bootstrap CSS-->
 	<link rel="stylesheet" href="/css/custom-styles.css">
-	
+
 	<script>
 		function onSignIn(googleUser) {
 
@@ -37,7 +37,7 @@
 			showOut();
 			//location.reload();
 		}
-			
+
 		function signOut() {
 			var auth2 = gapi.auth2.getAuthInstance();
 			auth2.signOut().then(function () {
@@ -53,13 +53,13 @@
 			document.getElementById("Welcome").style.display='block';
 			document.getElementById("in").style.display='none';
 			$('#entryArea').load(document.URL +  ' #entryArea');
-			
+
 		}
-			
+
 		function showIn(){
 			document.getElementById("in").style.display='block';
 			document.getElementById("out").style.display='none';
-			document.getElementById("Welcome").style.display='none'; 
+			document.getElementById("Welcome").style.display='none';
 			$('#entryArea').load(document.URL +  ' #entryArea');
 		}
 		function createCookie(name, value, days) {
@@ -68,17 +68,17 @@
 				var date = new Date();
 				date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
 				expires = "; expires=" + date.toGMTString();
-			} 
+			}
 			else {
 			  expires = "";
 			}
 			document.cookie = escape(name) + "=" + escape(value) + expires + "; path=/";
 		}
-		
+
 		function eraseCookie(name) {
 			createCookie(name,"",-1);
 		}
-		
+
 	</script>
 
 </head>
@@ -89,10 +89,10 @@
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>                        
+					<span class="icon-bar"></span>
 				</button>
 				<!--<a class="navbar-brand" href="#">SmartCampus</a>-->
-				<a class="navbar-brand" href="./index.php"><img src="/assets/images/UWindsor-logo-crest.png" style="width:auto;height:20px;" align="left">&nbsp;&nbsp;SmartCampus</a>
+				<a class="navbar-brand" href="/index.php"><img src="/assets/images/UWindsor-logo-crest.png" style="width:auto;height:20px;" align="left">&nbsp;&nbsp;SmartCampus</a>
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
@@ -116,5 +116,4 @@
 			</div>
 		</div>
 	</nav>
-</body> 
-											
+</body>

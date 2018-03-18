@@ -8,7 +8,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="google-signin-client_id" content="803315098158-ssu7hppidb2s9cvkbgemoh9a2a4vi8um.apps.googleusercontent.com">
+	<meta name="google-signin-client_id" content="366382206107-l7ot7ibl0co511a7bh0p13nfa7kgl74k.apps.googleusercontent.com">
 
 	<!--Bootstrap CSS and JavaScript-->
 	<link rel="stylesheet" href="/css/bootstrap.min.css">

@@ -97,8 +97,9 @@
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
 					<li <?php if ($currentPage === "home"){ echo "class=\"active\"";} ?> ><a href="/index.php">Home</a></li>
-					<li <?php if ($currentPage === "events-all" || $currentPage === "events-day" || $currentPage === "events-month"){ echo "class=\"active\"";} ?> class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Event Details<span class="caret"></span></a>
+					<li <?php if ($currentPage === "calendar" || $currentPage === "events-all" || $currentPage === "events-day" || $currentPage === "events-month"){ echo "class=\"active\"";} ?> class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Event Details<span class="caret"></span></a>
 						<ul class="dropdown-menu">
+							<li <?php if ($currentPage === "calendar"){ echo "class=\"active\"";} ?> ><a href="/calendar.php">Event Calendar</a></li>
 							<li <?php if ($currentPage === "events-all"){ echo "class=\"active\"";} ?> ><a href="/events/events-all.php">All Events</a></li>
 							<li <?php if ($currentPage === "events-month"){ echo "class=\"active\"";} ?> ><a href="/events/events-month.php">Monthly</a></li>
 							<li <?php if ($currentPage === "events-day"){ echo "class=\"active\"";} ?> ><a href="/events/events-day.php">Daily</a></li>
